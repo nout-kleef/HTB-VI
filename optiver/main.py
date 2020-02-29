@@ -4,8 +4,8 @@ import select
 REMOTE_IP = "35.179.45.135"
 UDP_ANY_IP = ""
 
-USERNAME = "optiver-python-template"
-PASSWORD = "password-goes-here"
+USERNAME = "Team29"
+PASSWORD = "yc6Wfj37"
 
 
 # -------------------------------------
