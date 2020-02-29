@@ -5,6 +5,7 @@ import MarketState
 
 class Trader():
     INSTRUMENTS = ["SP-FUTURE", "ESX-FUTURE"]
+    BALANCE = 20_000
 
     def __init__(self, conversionLine, baseLine, spanB, source):
         self.marketHistory = [] ## list of histograms for both markets
@@ -15,20 +16,20 @@ class Trader():
         self.conversionLine = conversionLine
         self.baseLine = baseLine
         self.spanB = spanB
-        
+
 
     def listen(self, source): ## parses if source == CSV and listens if live
         if source == "CSV":
             with open(r'C:\Users\F.K\Desktop\HTB\HTB-VI\market_data.csv') as market_data:
                 for line in market_data:
-                    comps = message.split(",")
-                    Timestamp = comps[0]   ## as string
-                    instrument = comps[1]  ## as string
-                    bid_price = float(comps[2])  
-                    bid_volume = int(comps[3]) 
-                    ask_price = float(comps[4])
-                    ask_volume = int(comps[5])
-                    market_state = MarketState(bid_price, ask_price, bid_volume, ask_volume)
+                    parts = line.split(",")
+                    Timestamp = parts[0]   ## as string
+                    instrument = parts[1]  ## as string
+                    bid_price = float(parts[2])  
+                    bid_volume = int(parts[3]) 
+                    ask_price = float(parts[4])
+                    ask_volume = int(parts[5])
+                    market_state = MarketState(bid_price, ask_price, bid_volume, ask_volume) ## update the class if we want more than these
                     self.update_market(market_state, instrument)
                     self.tradeCSV() 
 
