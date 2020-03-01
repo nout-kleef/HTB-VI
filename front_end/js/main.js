@@ -79,11 +79,8 @@ function updateGraph() {
             zoomType: 'x'
         },
         title: {
-            text: 'SP over time'
-        },
-        subtitle: {
-            text: document.ontouchstart === undefined ?
-                'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+            text: 'SP over time',
+            color: "white"
         },
         xAxis: {
             type: 'datetime'
@@ -124,10 +121,6 @@ function updateGraph() {
             type: 'line',
             name: 'SP mid-market price',
             data: SP_prices
-        }, {
-            type: 'scatter',
-            name: 'SP trades',
-            data: SP_trades
         }
         ]
     });
@@ -138,10 +131,6 @@ function updateGraph() {
         },
         title: {
             text: 'ESX over time'
-        },
-        subtitle: {
-            text: document.ontouchstart === undefined ?
-                'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
         },
         xAxis: {
             type: 'datetime'
@@ -182,10 +171,6 @@ function updateGraph() {
             type: 'line',
             name: 'ESX mid-market price',
             data: ESX_prices
-        }, {
-            type: 'scatter',
-            name: 'ESX trades',
-            data: ESX_trades
         }
         ]
     });

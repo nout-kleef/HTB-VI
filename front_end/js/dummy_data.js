@@ -325,26 +325,6 @@ let dummy_ESX_prices = [
     3348.5,
     3348.5,
     3348.5
-]
-let dummy_SP_trades = [
-    new Trade(0, true, 2900, 2),
-    new Trade(5, false, 2900, 3),
-    new Trade(10, true, 2900, 1),
-    new Trade(15, true, 2900, 1),
-    new Trade(16, false, 2900, 1),
-    new Trade(17, true, 2900, 3),
-    new Trade(25, false, 2900, 2),
-    new Trade(35, false, 2900, 1),
-    new Trade(40, true, 2900, 1)
 ];
-let dummy_ESX_trades = [
-    new Trade(0, true, 3400, 2),
-    new Trade(2, false, 3400, 3),
-    new Trade(3, true, 3400, 1),
-    new Trade(8, true, 3400, 1),
-    new Trade(12, false, 3400, 1),
-    new Trade(17, true, 3400, 3),
-    new Trade(21, false, 3400, 2),
-    new Trade(25, false, 3400, 1),
-    new Trade(46, true, 3400, 1)
-];
+let dummy_SP_trades = [];
+let dummy_ESX_trades = [];

@@ -12,13 +12,13 @@ Highcharts.theme = {
     },
     title: {
         style: {
-            color: '#000',
+            color: '#fff',
             font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
         }
     },
     subtitle: {
         style: {
-            color: '#666666',
+            color: '#999',
             font: 'bold 12px "Trebuchet MS", Verdana, sans-serif'
         }
     },
