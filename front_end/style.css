@@ -1,4 +1,12 @@
 html, body, * {
-    background-color: #313131;
+    background-color: #111111;
     color: white;
+}
+
+div.row {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
 }

@@ -1,4 +1,4 @@
-const DUMMY = false;
+const DUMMY = true;
 let SP_prices = [];
 let ESX_prices = [];
 let SP_trades = [];
@@ -74,12 +74,12 @@ function notify(action, vol, instr, price) {
 
 function updateGraph() {
     // TODO: convert lists to JSON
-    let chart = Highcharts.chart('container', {
+    let chart1 = Highcharts.chart('container1', {
         chart: {
             zoomType: 'x'
         },
         title: {
-            text: 'USD to EUR exchange rate over time'
+            text: 'SP over time'
         },
         subtitle: {
             text: document.ontouchstart === undefined ?
@@ -89,10 +89,6 @@ function updateGraph() {
             type: 'datetime'
         },
         yAxis: {
-            min: 0,
-            title: {
-                text: 'Exchange rate'
-            }
         },
         legend: {
             enabled: false
@@ -129,13 +125,63 @@ function updateGraph() {
             name: 'SP mid-market price',
             data: SP_prices
         }, {
-            type: 'line',
-            name: 'ESX mid-market price',
-            data: ESX_prices
-        }, {
             type: 'scatter',
             name: 'SP trades',
             data: SP_trades
+        }
+        ]
+    });
+
+    let chart2 = Highcharts.chart('container2', {
+        chart: {
+            zoomType: 'x'
+        },
+        title: {
+            text: 'ESX over time'
+        },
+        subtitle: {
+            text: document.ontouchstart === undefined ?
+                'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+        },
+        xAxis: {
+            type: 'datetime'
+        },
+        yAxis: {
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            area: {
+                fillColor: {
+                    linearGradient: {
+                        x1: 0,
+                        y1: 0,
+                        x2: 0,
+                        y2: 1
+                    },
+                    stops: [
+                        [0, Highcharts.getOptions().colors[0]],
+                        [1, Highcharts.color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                    ]
+                },
+                marker: {
+                    radius: 2
+                },
+                lineWidth: 1,
+                states: {
+                    hover: {
+                        lineWidth: 1
+                    }
+                },
+                threshold: null
+            }
+        },
+
+        series: [{
+            type: 'line',
+            name: 'ESX mid-market price',
+            data: ESX_prices
         }, {
             type: 'scatter',
             name: 'ESX trades',
