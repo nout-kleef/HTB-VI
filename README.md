@@ -23,6 +23,7 @@ The Leading Spans consitute the boundaries of the "cloud". When Leading Span A i
 
 If the trend is Up and the Conversion Line falls below the Base Line, then it is time to buy stocks. Similarly, when the crossover of Conversion Line and Base Line happens in the opposite direction, it is time to sell.  
 To contain risk, we are allowing the bot to buy only two stocks on each market (four in total) for every "trading period".  
+![image](https://user-images.githubusercontent.com/47427204/75623153-5ad41e80-5b9f-11ea-9f65-9c83af4024e7.png)
 
 
 *Team*: ... TBD
