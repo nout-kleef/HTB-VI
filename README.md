@@ -30,8 +30,9 @@ The SMS alert system will send a notification to the user when a trade is closed
 
 Some screenshots of the SMS functionality:
 On the lockscreen                     | In texting application
-:------------------------------------:|:-------------------------:
+:------------------------------------:|:-------------------------------------:
 <img src="sms_0.png" height="450"/>   |  <img src="sms_1.jpg" height="450"/>
+:------------------------------------:|:-------------------------------------:
 
 # usage instructions
 
