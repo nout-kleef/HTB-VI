@@ -29,10 +29,9 @@ To contain risk, we are allowing the bot to buy only two stocks on each market (
 The SMS alert system will send a notification to the user when a trade is closed, communicating losses and profit.
 
 Some screenshots of the SMS functionality:
-On the lockscreen                     | In texting application
-:------------------------------------:|:-------------------------------------:
-<img src="sms_0.png" height="450"/>   |  <img src="sms_1.jpg" height="450"/>
-:------------------------------------:|:-------------------------------------:
+<table>
+  <tr><td><img src="sms_0.png" height="450"/></td><td><img src="sms_1.jpg" height="450"/></td></tr>
+</table>
 
 # usage instructions
 
