@@ -61,7 +61,13 @@ function updateReceived(msg) {
 }
 
 function notify(action, vol, instr, price) {
-    const msg = "<span><b>" + action + "</b> " + vol + " shares of <b>" + instr + "</b> at <b>" + price + "</b></span><br>";
+    let icon = "";
+    if (action == "bought") {
+        icon = "<span class='glyphicon glyphicon-arrow-up' style='color:lightgreen'></span> ";
+    } else if (action == "sold") {
+        icon = "<span class='glyphicon glyphicon-arrow-down' style='color:red'></span> ";
+    }
+    const msg = "<span>" + icon + "<b>" + action + "</b> " + vol + " shares of <b>" + instr + "</b> at <b>" + price + "</b></span><br>";
     const currHtml = document.getElementById("notifications").innerHTML;
     document.getElementById("notifications").innerHTML = msg + currHtml;
 }
