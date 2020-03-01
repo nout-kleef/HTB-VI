@@ -19,11 +19,10 @@ The indicator is based on four components:
 4) Leading Span B -> midpoint of the last 52 average prices  
 
 Trading Strategy:  
-The Leading Spans consitute the boundaries of the "cloud". When Leading Span A is moving above Leading Span B it indicates an uptrend is gaining momentum. Conversly, Leading Span B above means a downward trend is taking place. A thin cloud shows indecision and a potentially weakening trend.
+The Leading Spans consitute the boundaries of the "cloud". When Leading Span A is moving above Leading Span B it indicates an uptrend is gaining momentum. Conversly, Leading Span B above means a downward trend is taking place. A thin cloud shows indecision and a potentially weakening trend, whereas a wide one means it is a good time to start trading.  
 
-
-
-*Trading Strategy* : Ichimoku Kinko Hyo. ... context TBD
+If the trend is Up and the Conversion Line falls below the Base Line, then it is time to buy stocks. Similarly, when the crossover of Conversion Line and Base Line happens in the opposite direction, it is time to sell.  
+To contain risk, we are allowing the bot to buy only two stocks on each market (four in total).
 
 
 *Team*: ... TBD
