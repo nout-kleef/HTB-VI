@@ -49,6 +49,7 @@ function updateReceived(msg) {
         let isBuy = compos[2] == "BUY=TRUE";
         let price = Number(comps[3].split("=")[1]);
         let volume = Number(comps[4].split("=")[1]);
+        notify(isBuy ? "bought" : "sold", volume, comps[1].split("=")[1], price);
         if (comps[1] == "FEEDCODE=SP-FUTURE") {
             SP_trades.push(new Trade(0, isBuy, price, volume));
         } else {
@@ -57,6 +58,12 @@ function updateReceived(msg) {
     }
     // redraw graph with new data
     updateGraph();
+}
+
+function notify(action, vol, instr, price) {
+    const msg = "<span><b>" + action + "</b> " + vol + " shares of <b>" + instr + "</b> at <b>" + price + "</b></span><br>";
+    const currHtml = document.getElementById("notifications").innerHTML;
+    document.getElementById("notifications").innerHTML = msg + currHtml;
 }
 
 function updateGraph() {
