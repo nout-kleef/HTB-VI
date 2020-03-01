@@ -3,7 +3,7 @@ import MarketState
 
 
 class Trader():        
-    def __init__():
+    def __init__(self):
         self.balance = 20000
     def startTrading(self):                 
         start_autotrader() 

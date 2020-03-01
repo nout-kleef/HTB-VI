@@ -58,7 +58,7 @@ def event_listener():
 
 def place_order_if_eligible_sell(market, bid_price, volume):
     if market.isEligibleForTradeSell(bid_price):                                              
-        send_order(feedcode,"SELL",bid_price,volume) 
+        send_order(market.feedcode,"SELL",bid_price,volume) 
         print("Selling {0} at: {1}, Volume: {2}".format(market.stock, bid_price, volume))                    
 
 def place_order_if_eligble_buy(market, ask_price, volume):
@@ -72,11 +72,11 @@ Calls place_order_if_eligible_sell
 Calls place_order_if_eligble_buy
 """
 def handle_server_message_for_marketState(market, bid_price, ask_price):
-    add_entry_to_market(market)
+    add_entry_to_market(market, bid_price, ask_price)
     place_order_if_eligible_sell(market, bid_price, 0)
     place_order_if_eligble_buy(market, ask_price, 0)
 
-def add_entry_to_market(market):      
+def add_entry_to_market(market, bid_price, ask_price):      
     market.addEntry(bid_price, ask_price)
                                        
 """
