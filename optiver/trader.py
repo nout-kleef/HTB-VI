@@ -1,5 +1,4 @@
 from autotrader import start_autotrader 
-import Histogram
 import MarketState
 
 

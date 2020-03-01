@@ -1,6 +1,10 @@
 
+from messageService import MessageService
+from secrets import PHONE_NUMBER
+
 class MarketState():
     def __init__(self, stock, feedcode):
+        self.messageService = MessageService(PHONE_NUMBER)
         self.stock = stock        
         self.feedcode = feedcode
         self.buy_prices  = list()
