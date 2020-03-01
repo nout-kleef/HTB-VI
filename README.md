@@ -33,8 +33,6 @@ Some screenshots of the SMS functionality:
   <tr><td><img src="sms_0.png" height="450"/></td><td><img src="sms_1.jpg" height="450"/></td></tr>
 </table>
 
-# usage instructions
-
 ## **3 - front-end**
 1) `cd front_end/`
 2) `python -m SimpleHTTPServer`
@@ -43,9 +41,10 @@ Some screenshots of the SMS functionality:
 The following shows an impression of what our front-end looks like.
 The graphs show the mid-market prices for the SP and ESX instruments, respectively.
 We plan to broadcast the trades our bot makes over SocketIO, which we can also show in the graphs as a scatterplot.
+NB: currently, the front-end only shows static data. When we get the SocketIO integration set up, we hope that we can update the chart in real time.
 ![image](impression.png)
 
 ## Authors
-[Mihail Yonchev](https://github.com/slaifan)
-[Nout Kleef](https://github.com/nout-kleef)
+[Mihail Yonchev](https://github.com/slaifan)  
+[Nout Kleef](https://github.com/nout-kleef)  
 [Vincenzo Incutti](https://github.com/enzo-inc)
