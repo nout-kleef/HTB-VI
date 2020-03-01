@@ -10,7 +10,7 @@ Our project is composed of three parts:
 3 - A Web page for data visualization  
 
 
-1 - Algorithm  
+**1 - Algorithm**  
 We use the Ichimoku Cloud Indicator, a fairly safe and simple strategy especially for Microtrading.  
 The indicator is based on four components:  
 1) Conversion Line -> midpoint of the last 9 average prices  
@@ -23,6 +23,7 @@ The Leading Spans consitute the boundaries of the "cloud". When Leading Span A i
 
 If the trend is Up and the Conversion Line falls below the Base Line, then it is time to buy stocks. Similarly, when the crossover of Conversion Line and Base Line happens in the opposite direction, it is time to sell.  
 To contain risk, we are allowing the bot to buy only two stocks on each market (four in total) for every "trading period".  
+![image](https://user-images.githubusercontent.com/47427204/75623153-5ad41e80-5b9f-11ea-9f65-9c83af4024e7.png)
 
 
 *Team*: ... TBD
