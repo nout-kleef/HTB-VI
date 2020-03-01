@@ -7,7 +7,11 @@ Our project is composed of three parts:
 
 1 - The trading algorithm itself  
 2 - An SMS alert functionality to communicate profits and losses  
-3 - A web-page for data visualization  
+3 - A Web page for data visualization  
+
+
+1 - Algorithm
+We use the Ichimoku Cloud Indicator, a fairly 
 
 
 
