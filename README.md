@@ -11,7 +11,7 @@ Our project is composed of three parts:
 
 
 1 - Algorithm  
-We use the Ichimoku Cloud Indicator, a fairly safe and simple strategy especially for micro trading.  
+We use the Ichimoku Cloud Indicator, a fairly safe and simple strategy especially for Microtrading.  
 The indicator is based on four components:  
 1) Conversion Line -> midpoint of the last 9 average prices  
 2) Base Line -> midpoint of the last 26 average prices  
