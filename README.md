@@ -25,7 +25,6 @@ If the trend is Up and the Conversion Line falls below the Base Line, then it is
 To contain risk, we are allowing the bot to buy only two stocks on each market (four in total) for every "trading period".  
 
 
-
 *Team*: ... TBD
 
 # usage instructions
