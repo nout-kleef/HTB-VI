@@ -5,9 +5,9 @@ The Challenge is to create a trading algorithm to make money by buy and selling 
 
 Our project is composed of three parts:
 
-1 - The trading algorithm itself
-2 - An SMS alert functionality to communicate profits and losses
-3 - A Web page for data visualization
+1 - The trading algorithm itself  
+2 - An SMS alert functionality to communicate profits and losses  
+3 - A Web page for data visualization  
 
 
 1 - Algorithm  
