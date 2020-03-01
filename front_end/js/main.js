@@ -30,7 +30,7 @@ function startListening() {
 }
 
 // TYPE=PRICE|FEEDCODE=FOOBAR|BID_PRICE=10.0|BID_VOLUME=100|ASK_PRICE=11.0|ASK_VOLUME=20
-// TYPE=TRADE|FEEDCODE=FOOBAR|SIDE=BID|PRICE=22.0|VOLUME=100
+// TYPE=TRADE|FEEDCODE=FOOBAR|BUY=TRUE|PRICE=22.0|VOLUME=100
 function updateReceived(msg) {
     // check which list this update should go to
     comps = msg.split("|");
@@ -46,7 +46,16 @@ function updateReceived(msg) {
             ESX_prices.push(mid_market);
         }
     } else {
-
+        let isBuy = true;
+        let bid_volume = comps[3].split("=")[1];
+        let ask_price = comps[4].split("=")[1];
+        let ask_volume = comps[5].split("=")[1];
+        let mid_market = (bid_price + ask_price) / 2;
+        if (comps[1] == "FEEDCODE=SP-FUTURE") {
+            SP_prices.push(mid_market);
+        } else {
+            ESX_prices.push(mid_market);
+        }
     }
     // rebuild JSON
     // redraw graph with new JSON
