@@ -28,8 +28,11 @@ To contain risk, we are allowing the bot to buy only two stocks on each market (
 **2 - SMS alert**  
 The SMS alert system will send a notification to the user when a trade is closed, communicating losses and profit.
 
-*Team*: ... TBD
 
+## Authors  
+[Mihail Yonchev](https://github.com/slaifan)  
+[Nout Kleef](https://github.com/nout-kleef)   
+[Vincenzo Incutti](https://github.com/enzo-inc)  
 # usage instructions
 
 ## front-end
