@@ -56,36 +56,35 @@ def event_listener():
             message = data.decode('utf-8')
             handle_message(message, marketStateESX, marketStateSP)
 
-def place_order_if_eligible_sell(Market: market, bid_price, volume: int):
+def place_order_if_eligible_sell(market, bid_price, volume):
     if market.isEligibleForTradeSell(bid_price):                                              
         send_order(feedcode,"SELL",bid_price,volume) 
         print("Selling {0} at: {1}, Volume: {2}".format(market.stock, bid_price, volume))                    
 
-def place_order_if_eligble_buy(Market: market, ask_price, volume: int):
+def place_order_if_eligble_buy(market, ask_price, volume):
     if market.isEligibleForTradeBuy(ask_price):
         send_order(market.feedcode,"BUY",ask_price,volume) 
         print("Buying {0} at: {1}, Volume: {2}".format(market.stock, ask_price, volume))                
     
-'''
+"""
 Adds entry to market. 
 Calls place_order_if_eligible_sell
 Calls place_order_if_eligble_buy
-'''
-def handle_server_message_for_marketState(market:MarketState, bid_price, ask_price):
+"""
+def handle_server_message_for_marketState(market, bid_price, ask_price):
     add_entry_to_market(market)
-    place_order_if_eligible_sell(market, bid_price, 10)
-    place_order_if_eligble_buy(market, ask_price, 10)
+    place_order_if_eligible_sell(market, bid_price, 0)
+    place_order_if_eligble_buy(market, ask_price, 0)
 
-def add_entry_to_market(market: MarketState):      
-    marketStateSP.addEntry(bid_price, ask_price)
-                               
-        
-'''
+def add_entry_to_market(market):      
+    market.addEntry(bid_price, ask_price)
+                                       
+"""
 Handles an entry message from the server [Either type: PRICE or TRADE]
 Receives message and a reference to marketStateESX and marketStateSP
 On message received from server its adding the entry to the appropriate market and checks if eiligble to open position.
 If yes, it opens a position using open_position().
-'''
+"""
 def handle_message(message, marketStateESX, marketStateSP):
     comps = message.split("|")
     
@@ -105,7 +104,7 @@ def handle_message(message, marketStateESX, marketStateSP):
         
         if feedcode == "SP-FUTURE":
             handle_server_message_for_marketState(marketStateSP, bid_price, ask_price)            
-            
+
         if feedcode == "ESX-FUTURE":
             handle_server_message_for_marketState(marketStateESX, bid_price, ask_price)                    
 

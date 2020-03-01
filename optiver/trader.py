@@ -1,4 +1,4 @@
-from autotrader_template import start_autotrader 
+from autotrader import start_autotrader 
 import Histogram
 import MarketState
 
@@ -37,8 +37,8 @@ class Trader():
                     self.tradeCSV() 
 
         else:
-            start_autotrader() ### not sure about this tbh but this is where we listen from in our design
-            ## IMPLEMENT LIVETRADE()
+            pass
+           # start_autotrader() 
 
     def update_market(self, market_state, instrument):
         index = self.marketHistory.index(instrument)
