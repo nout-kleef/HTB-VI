@@ -10,8 +10,16 @@ Our project is composed of three parts:
 3 - A Web page for data visualization
 
 
-1 - Algorithm
-We use the Ichimoku Cloud Indicator, a fairly
+1 - Algorithm  
+We use the Ichimoku Cloud Indicator, a fairly safe and simple strategy especially for micro trading.  
+The indicator is based on four components:  
+1) Conversion Line -> midpoint of the last 9 average prices  
+2) Base Line -> midpoint of the last 26 average prices  
+3) Leading Span A -> midpoint of Conversion Line and Base Line  
+4) Leading Span B -> midpoint of the last 52 average prices  
+
+Trading Strategy:  
+The Leading Spans consitute the boundaries of the "cloud". When Leading Span A is moving above Leading Span B it indicates an uptrend is gaining momentum. Conversly, Leading Span B above means a downward trend is taking place. A thin cloud shows indecision and a potentially weakening trend.
 
 
 
