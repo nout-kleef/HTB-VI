@@ -1,13 +1,10 @@
 import socket
 import select
 from MarketState import MarketState
+from secrets import USERNAME, PASSWORD 
 
 REMOTE_IP = "35.179.45.135"
 UDP_ANY_IP = ""
-
-USERNAME = "Team29"
-PASSWORD = "yc6Wfj37"
-
 
 # -------------------------------------
 # EML code (EML is execution market link)
