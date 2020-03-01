@@ -107,19 +107,13 @@ def handle_message(message, marketStateESX, marketStateSP):
 
         if feedcode == "ESX-FUTURE":
             handle_server_message_for_marketState(marketStateESX, bid_price, ask_price)                    
-
-        print(
-            f"[PRICE] product: {feedcode} bid: {bid_volume}@{bid_price} ask: {ask_volume}@{ask_price}")
-
+        
     if type == "TYPE=TRADE":
 
         feedcode = comps[1].split("=")[1]
         side = comps[2].split("=")[1]
         traded_price = float(comps[3].split("=")[1])
         traded_volume = int(comps[4].split("=")[1])
-
-        print(
-            f"[TRADE] product: {feedcode} side: {side} price: {traded_price} volume: {traded_volume}")
 
     if type == "TYPE=ORDER_ACK":
 
@@ -139,8 +133,6 @@ def handle_message(message, marketStateESX, marketStateSP):
 
         traded_volume = int(comps[3].split("=")[1])
 
-        print(
-            f"[ORDER_ACK] feedcode: {feedcode}, price: {traded_price}, volume: {traded_volume}")
 
 
 def send_order(target_feedcode, action, target_price, volume):
