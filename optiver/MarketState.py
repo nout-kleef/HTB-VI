@@ -1,6 +1,7 @@
 class MarketState():
-    def __init__(self, stock):
+    def __init__(self, stock, feedcode):
         self.stock = stock
+        self.feedcode = feedcode
         self.buy_prices  = list()
         self.sell_prices = list()
         self.entries   = 0
