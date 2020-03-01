@@ -11,6 +11,7 @@ class MarketState():
         self.sell_prices = list()
         self.entries   = 0
         self.buy_price = None
+        self.last_bought_price = None
         self.positions = 0
 
     def addEntry(self, buy_price, sell_price):
@@ -30,14 +31,14 @@ class MarketState():
         baseLine = self.__calcBaseLine(self.buy_prices)
         cloudPoint = self.__getCloud(conversionLine, baseLine, self.buy_prices)
         print(self.stock)        
-        print('Conversion line: ', conversionLine, ' > ', baseLine)
+        print('Conversion Line over Base Line: ', conversionLine > baseLine)
         print('Positions:', self.positions)
         print('Cloud Point: ', cloudPoint)
         print('Buy Price ', buy_price)
         print('----------------------')
         if self.__isAboveCloud(cloudPoint, buy_price) and self.positions == 0 and conversionLine > baseLine:
             self.positions = self.positions + 1
-            self.buy_price = buy_price
+            self.buy_price = buy_price            
             return True
         return False
 
@@ -49,6 +50,12 @@ class MarketState():
         cloudPoint = self.__getCloud(conversionLine, baseLine, self.sell_prices)
         if conversionLine < baseLine and self.buy_price and self.buy_price < sell_price:        
             self.positions = 0
+            try:                
+                percentage_difference = ((float(sell_price)-self.buy_price)/self.buy_price)*100
+                self.messageService.sendMessageUpdate(percentage_difference)
+            except:
+                print('[ERROR]: Messaging service error!')
+                pass            
             return True
         return False
         
