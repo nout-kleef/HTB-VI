@@ -1,4 +1,11 @@
 # Hack The Burgh - VI
+During a sleep depriving but rewarding weekend at **Hack the Burgh**, we set out to build an **automated trading bot**.
+This challenge was set up by Optiver, and the goal was to find a trading strategy that would allow the bot to "out-trade" the competition.
+
+Both me and my team had little to no knowledge of the FinTech world, and it was interesting to gain some insight into how latency (or rather, lack thereof) allows one trader to gain an edge over the others!
+
+I'm very proud of what my team accomplished: apart from learning how to program an automated trading strategy, we ended up winning the Optiver challenge! 🥳 📈
+
 # Project - Trading Bot for the Optiver Challenge
 
 The Challenge is to create a trading algorithm to make money by buy and selling stocks on two indeces : S&P500 (SP) and Eurostoxx (ESX).
@@ -8,7 +15,6 @@ Our project is composed of three parts:
 1) The trading algorithm itself
 2) An SMS alert functionality to communicate profits and losses
 3) A Web page for data visualization
-
 
 ## **1 - Algorithm**
 We use the Ichimoku Cloud Indicator, a fairly safe and simple strategy especially for Microtrading.
